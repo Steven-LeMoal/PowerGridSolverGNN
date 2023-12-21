@@ -1,0 +1,30 @@
+data:
+    lag_step: 4
+    lag_jump: 10
+    log_edge_attr: True
+
+model: 
+    hidden_features: 16
+    output_features: 1
+    num_layers: 2
+    dropout: 0.30
+    leaky_or_tanh: False
+    use_gat: True
+    use_attention: True
+
+hyperparameters: 
+    learning_rate: 0.001
+    num_epochs: 25
+    patience: 5
+    shuffle_train: True
+    shuffle_val: False
+    monitor_val_loss_or_train_loss: val_loss
+    train_percent: 0.7
+    batchsize: 32
+    seed: 12345
+
+folder_file: 
+    device: cuda:0
+    dire: 
+    log_folder_in_dire: /logs
+    
