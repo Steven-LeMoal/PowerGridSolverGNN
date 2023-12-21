@@ -26,7 +26,7 @@ Contains the GNN model definition. This file defines the architecture of the GNN
 
 ### `train.py`
 Script for training the GNN model. It reads configuration from a YAML file and trains the model on the provided dataset.
-The training logs, checkpoints, config file and other are save in a logs folder (that will be used for eval.py)
+The training logs, checkpoints, config file and other are save in a logs folder : '/logs/{model}/... (that will be used for eval.py)
 
 #### Arguments:
 - `config_path`: Path to the configuration YAML file.
@@ -36,6 +36,7 @@ The training logs, checkpoints, config file and other are save in a logs folder 
 
 ### `eval.py`
 Script for evaluating the trained GNN model. It uses the model checkpoint from training to make predictions on a validation or test dataset.
+The prediction loads.npy file are generated in the '/logs/{model}/preds/'
 
 #### Arguments:
 - `config_path`: Path to the configuration YAML file used during training.
@@ -64,7 +65,9 @@ Jupyter notebook for basic data visualization and analysis. Useful for understan
 - Loss plots and other relevant metrics during training and validation are saved if `save_plot` is set to `True`.
 - The `basic_data_analysis.ipynb` notebook provides utilities for visualizing data distributions, correlations, and other relevant insights.
 
-## Usage
+## Usage 
+
+(see : 
 
 1. **Training the Model**:
    ```
